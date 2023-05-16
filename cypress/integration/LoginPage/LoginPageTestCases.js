@@ -32,7 +32,7 @@ class LoginPageTestCases {
       })
       it('1.6 Test login without any credentials', ()=>{
         cy.log('Validating a login without any credentials');
-        LoginPageFunctions.loginWrongCredentials();
+        LoginPageFunctions.loginNoCredentials();
       })
     });
   }
