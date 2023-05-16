@@ -1,19 +1,30 @@
 /// <reference types="Cypress" />
 
-import LoginPageObjects from "./LoginPageObjects";
+import MainPageUtils from '../MainPageUtils';
+import LoginPageUtils from './LoginPageUtils';
 
-const objects = new LoginPageObjects
-let values = require("./LoginPageValues.json");
+let values = require('./LoginPageValues.json');
 
 class LoginPageFunctions {
+  validateLoginPageDesign() {
+    LoginPageUtils.logo
+      .should('be.visible')
+      .should('contain.text', values.logo);
+    LoginPageUtils.loginContainer.should('be.visible');
+    LoginPageUtils.usernameField.should('be.visible').should('be.empty');
+    LoginPageUtils.passwordField.should('be.visible').should('be.empty');
+  }
 
-    validateLoginPageDesign() {
-        objects.getLogo().should('be.visible').should('contain.text', values.logo)
-        objects.getLoginContainer().should('be.visible')
-        objects.getUsernameField().should('be.visible').should('be.empty')
-        objects.getPasswordField().should('be.visible').should('be.empty')
-    }
+  login() {
+    LoginPageUtils.usernameField.type('standard_user');
+    LoginPageUtils.passwordField.type('secret_sauce');
+    LoginPageUtils.loginButton.click();
+  }
 
+  testLoginSuccess() {
+    MainPageUtils.cartButton.should('be.visible');
+    MainPageUtils.inventoryContainer.should('be.visible');
+  }
 }
 
-export default LoginPageFunctions;
+export default new LoginPageFunctions();

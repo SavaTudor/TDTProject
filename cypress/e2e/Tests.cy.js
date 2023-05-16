@@ -1,7 +1,7 @@
-import LoginPageTestCases from "../integration/LoginPage/LoginPageTestCases"
-
-const loginPageTests = new LoginPageTestCases
+import CartPageTestCases from '../integration/CartPage/CartPageTestCases';
+import LoginPageTestCases from '../integration/LoginPage/LoginPageTestCases';
 
 describe('All Tests', () => {
-  loginPageTests.loginPageTests();
-})
+  LoginPageTestCases.startTests();
+  CartPageTestCases.startTests();
+});
