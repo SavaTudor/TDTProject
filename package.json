@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cypress run",
+    "start": "cypress run --spec \"cypress/e2e/Tests.cy.js\" --reporter junit --reporter-options \"mochaFile=results/my-test-output.xml,toConsole=true\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.12.0"
+    "cypress": "^12.12.0",
+    "cypress-junit-reporter": "^1.3.1"
   }
 }

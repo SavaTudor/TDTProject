@@ -20,6 +20,10 @@ class LoginPageUtils {
   get loginButton() {
     return cy.get('#login-button');
   }
+
+  get errorMessage(){
+    return cy.get(".error-message-container > h3");
+  }
 }
 
 export default new LoginPageUtils();
