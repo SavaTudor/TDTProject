@@ -1,0 +1,15 @@
+{
+  "logo": "Swag Labs",
+  "title": "Products",
+  "first_product_title_A_Z": "Sauce Labs Backpack",
+  "first_product_price_A_Z": "29.99",
+  "last_product_title_A_Z": "Test.allTheThings() T-Shirt (Red)",
+  "last_product_price_A_Z": "15.99",
+  "first_product_title_low_high": "Sauce Labs Onesie",
+  "first_product_price_low_high": "7.99",
+  "last_product_title_low_high": "Sauce Labs Fleece Jacket",
+  "last_product_price_low_high": "49.99",
+  "add_cart_button": "Add to cart",
+  "remove_cart_button": "Remove",
+  "products_count": 6
+}
