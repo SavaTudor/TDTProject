@@ -17,10 +17,20 @@ class CartPageTestCases {
         CartPageFunctions.testAddedProductsToCart();
       });
 
-      it('3.2 Test remove from cart', () => {
+      // it('3.2 Test remove from cart', () => {
+      //   CartPageFunctions.addProductsToCart();
+      //   CartPageFunctions.removeProductsFromCart();
+      //   CartPageFunctions.testRemoveProductsFromCart();
+      // });
+
+      it('3.3 Test checkout', () => {
         CartPageFunctions.addProductsToCart();
-        CartPageFunctions.removeProductsFromCart();
-        CartPageFunctions.testRemoveProductsFromCart();
+        CartPageFunctions.testAddedProductsToCart();
+        CartPageFunctions.checkout();
+        CartPageFunctions.fillCheckout();
+        CartPageFunctions.continue();
+        CartPageFunctions.finish();
+        CartPageFunctions.backHome();
       });
     });
   }

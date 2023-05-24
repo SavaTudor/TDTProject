@@ -25,6 +25,36 @@ class CartPageFunctions {
   testRemoveProductsFromCart() {
     CartPageUtils.cartIconNumber.should('not.exist');
   }
+
+  checkout() {
+    CartPageUtils.checkoutButton.click();
+  }
+
+  testCheckout() {
+    CartPageUtils.checkoutButton.should('not.exist');
+  }
+
+  continue() {
+    CartPageUtils.continueButton.click();
+  }
+
+  testContinue() {
+    CartPageUtils.continueButton.should('be.visible');
+  }
+
+  fillCheckout() {
+    CartPageUtils.firstName.type('Rares');
+    CartPageUtils.lastName.type('Gherman');
+    CartPageUtils.postalCode.type('123456');
+  }
+
+  finish() {
+    CartPageUtils.finishButton.click();
+  }
+
+  backHome() {
+    CartPageUtils.backHomeButton.should('be.visible');
+  }
 }
 
 export default new CartPageFunctions();
