@@ -9,7 +9,7 @@ class CartPageTestCases {
       beforeEach(() => {
         cy.visit('https://www.saucedemo.com/');
         LoginPageFunctions.login();
-        LoginPageFunctions.testLoginSuccess();
+        // LoginPageFunctions.testLoginSuccess();
       });
 
       it('3.1 Test add to cart', () => {
@@ -17,11 +17,11 @@ class CartPageTestCases {
         CartPageFunctions.testAddedProductsToCart();
       });
 
-      // it('3.2 Test remove from cart', () => {
-      //   CartPageFunctions.addProductsToCart();
-      //   CartPageFunctions.removeProductsFromCart();
-      //   CartPageFunctions.testRemoveProductsFromCart();
-      // });
+      it('3.2 Test remove from cart', () => {
+        CartPageFunctions.addProductsToCart();
+        CartPageFunctions.removeProductsFromCart();
+        CartPageFunctions.testRemoveProductsFromCart();
+      });
 
       it('3.3 Test checkout', () => {
         CartPageFunctions.addProductsToCart();
