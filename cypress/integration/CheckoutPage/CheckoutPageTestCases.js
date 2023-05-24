@@ -35,14 +35,6 @@ class CheckoutPageTestCases {
         CheckoutPageFunctions.testCheckoutProcceedPass()
       });
 
-      it('Test with special characters in the first name should pass', () => {
-        CheckoutPageFunctions.fillFirstName("Test#@ Test")
-        CheckoutPageFunctions.fillLastName("Test")
-        CheckoutPageFunctions.fillPostalCode("111111")
-        CheckoutPageFunctions.pressCheckoutButton()
-        CheckoutPageFunctions.testCheckoutProcceedPass()
-      });
-
       it('Test happy path should pass', () => {
         CheckoutPageFunctions.fillFirstName("Test")
         CheckoutPageFunctions.fillLastName("Test")
@@ -59,12 +51,21 @@ class CheckoutPageTestCases {
         CheckoutPageFunctions.pressCheckoutButton()
         CheckoutPageFunctions.checkInputs("Test", "Test", "111111")
       });
+
       it('Test with characters in postal code', () => {
         CheckoutPageFunctions.fillFirstName("Test Test")
         CheckoutPageFunctions.fillLastName("Test")
         CheckoutPageFunctions.fillPostalCode("111111aa211")
         CheckoutPageFunctions.pressCheckoutButton()
         CheckoutPageFunctions.testCheckoutProcceedFail()
+      });
+
+      it('Test with special characters in the first name should pass', () => {
+        CheckoutPageFunctions.fillFirstName("Test#@ Test")
+        CheckoutPageFunctions.fillLastName("Test")
+        CheckoutPageFunctions.fillPostalCode("111111")
+        CheckoutPageFunctions.pressCheckoutButton()
+        CheckoutPageFunctions.testCheckoutProcceedPass()
       });
     });
   }
