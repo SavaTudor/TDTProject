@@ -10,5 +10,6 @@ module.exports = defineConfig({
   reporterOptions: {
     mochaFile: 'results/my-test-output.xml',
     toConsole: true,
+    pageLoadTimeout : 8000
   },
 });
